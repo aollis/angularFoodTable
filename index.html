@@ -22,7 +22,7 @@
   <div class="alert alert-info">
     <p>Sort Type: {{ sortType }}</p>
     <p>Sort Reverse: {{ sortReverse }}</p>
-    <p>Search Query: {{ searchFish }}</p>
+    <p>Search Query: {{ searchGuitar }}</p>
   </div>
 
   <form>
@@ -30,7 +30,7 @@
       <div class="input-group">
         <div class="input-group-addon"><i class="fa fa-search"></i></div>
 
-        <input type="text" class="form-control" placeholder="Search da Fish" ng-model="searchFish">
+        <input type="text" class="form-control" placeholder="Search da Guitar" ng-model="searchGuitar">
 
       </div>      
     </div>
@@ -42,25 +42,25 @@
       <tr>
         <td>
           <a href="#" ng-click="sortType = 'name'; sortReverse = !sortReverse">
-            Sushi Roll 
+            Name 
           <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
           <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
           </a>
         </td>
 
         <td>
-          <a href="#" ng-click="sortType = 'fish'; sortReverse = !sortReverse">
-            Sushi Roll 
-          <span ng-show="sortType == 'fish' && !sortReverse" class="fa fa-caret-down"></span>
-          <span ng-show="sortType == 'fish' && sortReverse" class="fa fa-caret-up"></span>
+          <a href="#" ng-click="sortType = 'type'; sortReverse = !sortReverse">
+            Type 
+          <span ng-show="sortType == 'type' && !sortReverse" class="fa fa-caret-down"></span>
+          <span ng-show="sortType == 'type' && sortReverse" class="fa fa-caret-up"></span>
           </a>
         </td>
 
         <td>
-          <a href="#" ng-click="sortType = 'tastiness'; sortReverse = !sortReverse">
-            Sushi Roll 
-          <span ng-show="sortType == 'tastiness' && !sortReverse" class="fa fa-caret-down"></span>
-          <span ng-show="sortType == 'tastiness' && sortReverse" class="fa fa-caret-up"></span>
+          <a href="#" ng-click="sortType = 'price'; sortReverse = !sortReverse">
+            Price
+          <span ng-show="sortType == 'price' && !sortReverse" class="fa fa-caret-down"></span>
+          <span ng-show="sortType == 'price' && sortReverse" class="fa fa-caret-up"></span>
           </a>
         </td>
 
@@ -68,10 +68,10 @@
     </thead>
     
     <tbody>
-      <tr ng-repeat="roll in sushi | orderBy:sortType:sortReverse | filter:searchFish">
-        <td>{{ roll.name }}</td>
-        <td>{{ roll.fish }}</td>
-        <td>{{ roll.tastiness }}</td>
+      <tr ng-repeat="guitar in guitars | orderBy:sortType:sortReverse | filter:searchGuitar">
+        <td>{{ guitar.name }}</td>
+        <td>{{ guitar.type }}</td>
+        <td>{{ guitar.price }}</td>
       </tr>
     </tbody>
     

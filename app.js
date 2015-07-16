@@ -3,14 +3,14 @@ angular.module('sortApp', [])
 .controller('mainController', function($scope) {
   $scope.sortType     = 'name'; // set the default sort type
   $scope.sortReverse  = false;  // set the default sort order
-  $scope.searchFish   = '';     // set the default search/filter term
+  $scope.searchGuitar   = '';     // set the default search/filter term
   
   // create the list of sushi rolls 
-  $scope.sushi = [
-    { name: 'Cali Roll', fish: 'Crab', tastiness: 2 },
-    { name: 'Philly', fish: 'Tuna', tastiness: 4 },
-    { name: 'Tiger', fish: 'Eel', tastiness: 7 },
-    { name: 'Rainbow', fish: 'Variety', tastiness: 6 }
+  $scope.guitars = [
+    { name: 'PRS', type: 'Electric', price: 2000 },
+    { name: 'Fender', type: 'Electric', price: 4000 },
+    { name: 'Gibson', type: 'Acoustic', price: 7000 },
+    { name: 'Ibanez', type: 'Electric', price: 6000 }
   ];
   
 });
